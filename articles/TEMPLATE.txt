@@ -1,0 +1,19 @@
+Copy this into a new .md file in the articles/ folder.
+
+Example target:
+articles/agent-memory.md
+
+---
+title: "文章标题"
+date: 2026-05-15
+tags: [Agent, Codex]
+summary: "一句话摘要。"
+permalink: /articles/agent-memory/
+---
+
+这里直接写 Markdown 正文。
+
+## 小标题
+
+- 要点一
+- 要点二

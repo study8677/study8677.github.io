@@ -1,9 +1,11 @@
 ---
 layout: post
+article: true
 title: "Vibe Coding Guide：把 AI Coding 变成工程化工作流"
-date: 2026-05-15 20:00:00 +0800
+date: 2026-05-15
 tags: [Vibe Coding, Agent, Engineering Workflow]
 summary: "我参与共创的 Vibe Coding 实战教程，面向正在使用 Codex、Claude Code、Cursor、Aider 等 AI Coding 工具的开发者。"
+permalink: /articles/vibe-coding-guide/
 ---
 
 [Vibe Coding Guide](https://github.com/Lling0000/Vibe_coding_guide) 是我参与共创的一份 AI Agent 协作开发实战教程。

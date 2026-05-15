@@ -12,12 +12,13 @@ permalink: /articles/
   </div>
 
   <div class="article-list archive-list">
-    {% for post in site.posts %}
-      <a class="article-row" href="{{ post.url | relative_url }}">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-        <span>{{ post.title }}</span>
-        {% if post.tags %}
-          <small>{{ post.tags | join: " / " }}</small>
+    {% assign article_pages = site.pages | where: "article", true | sort: "date" | reverse %}
+    {% for article in article_pages %}
+      <a class="article-row" href="{{ article.url | relative_url }}">
+        <time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%Y-%m-%d" }}</time>
+        <span>{{ article.title }}</span>
+        {% if article.tags %}
+          <small>{{ article.tags | join: " / " }}</small>
         {% endif %}
       </a>
     {% endfor %}

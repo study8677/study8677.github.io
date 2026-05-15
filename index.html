@@ -124,19 +124,20 @@ description: "JingWen Fan - AI-Native Developer"
         <a class="section-link" href="{{ '/articles/' | relative_url }}">全部文章</a>
       </div>
 
-      <a class="guide-feature" href="{{ '/articles/2026/05/15/vibe-coding-guide/' | relative_url }}">
+      <a class="guide-feature" href="{{ '/articles/vibe-coding-guide/' | relative_url }}">
         <span>Featured guide</span>
         <strong>Vibe Coding Guide</strong>
         <p>我参与共创的 AI Agent 协作开发实战教程：从 spec、上下文、subagent 到 worktree、skill、CI/CD 和 Agent 行为测试。</p>
       </a>
 
       <div class="article-table">
-        {% for post in site.posts limit: 5 %}
-          <a class="article-row" href="{{ post.url | relative_url }}">
-            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-            <span>{{ post.title }}</span>
-            {% if post.tags %}
-              <small>{{ post.tags | join: " / " }}</small>
+        {% assign article_pages = site.pages | where: "article", true | sort: "date" | reverse %}
+        {% for article in article_pages limit: 5 %}
+          <a class="article-row" href="{{ article.url | relative_url }}">
+            <time datetime="{{ article.date | date_to_xmlschema }}">{{ article.date | date: "%Y-%m-%d" }}</time>
+            <span>{{ article.title }}</span>
+            {% if article.tags %}
+              <small>{{ article.tags | join: " / " }}</small>
             {% endif %}
           </a>
         {% endfor %}
@@ -193,7 +194,7 @@ description: "JingWen Fan - AI-Native Developer"
       <p class="eyebrow">Write Here</p>
       <h2>怎么写文章</h2>
       <ol class="steps">
-        <li>在 <code>_posts/</code> 新建 <code>YYYY-MM-DD-title.md</code>。</li>
+        <li>在 <code>articles/</code> 新建 <code>title.md</code>。</li>
         <li>顶部写 front matter：标题、日期、标签、摘要。</li>
         <li>下面直接用 Markdown 写正文。</li>
         <li><code>git add</code>、<code>commit</code>、<code>push</code> 后自动发布。</li>
