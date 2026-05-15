@@ -569,7 +569,22 @@ h3 {
   }
 
   .metrics {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .metrics div {
+    padding: 9px;
+  }
+
+  .metrics span {
+    min-height: 32px;
+    font-size: 11px;
+    line-height: 1.25;
+  }
+
+  .metrics strong {
+    font-size: 20px;
   }
 
   .home-grid {
