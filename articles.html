@@ -1,0 +1,25 @@
+---
+layout: default
+title: Articles
+description: "JingWen Fan 的文章列表"
+permalink: /articles/
+---
+
+<section class="archive">
+  <div class="section-title">
+    <p class="eyebrow">Articles</p>
+    <h1>文章列表</h1>
+  </div>
+
+  <div class="article-list archive-list">
+    {% for post in site.posts %}
+      <a class="article-row" href="{{ post.url | relative_url }}">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        <span>{{ post.title }}</span>
+        {% if post.tags %}
+          <small>{{ post.tags | join: " / " }}</small>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</section>
