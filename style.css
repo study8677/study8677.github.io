@@ -314,6 +314,35 @@ h3 {
   border-top: 1px solid var(--line-strong);
 }
 
+.guide-feature {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+  padding: 15px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, 0.68);
+}
+
+.guide-feature span {
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.guide-feature strong {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.guide-feature p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 750;
+}
+
 .project-row {
   display: grid;
   grid-template-columns: 38px minmax(0, 1fr) minmax(180px, 0.34fr);
